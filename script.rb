@@ -1,0 +1,4 @@
+def substrings(string)
+
+    
+end
