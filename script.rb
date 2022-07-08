@@ -6,16 +6,26 @@ def substrings(string, words_array)
     string_array = string.gsub(/[^0-9A-Za-z\s]/, '').downcase.split(" ")
 
     string_array.each do |word|
+
         letters_array = word.split("")
-        words_array.each do |sub|
-            sub_letters_array = sub.split("")
-            if sub_letters_array.intersect?(letters_array)
-                puts sub
+        puts "WORD #{letters_array}"
+
+        words_array.each do |substring|
+            sub_letters_array = substring.split("")
+
+            if sub_letters_array.intersect?(letters_array) #Check if there is at least one character in common
+                
+               if sub_letters_array == letters_array
+                puts substring 
+               end
+                # puts "TO MATCH #{sub_letters_array}"
+                array_match = sub_letters_array & letters_array
+                # p array_match
+            else
+                puts "No letters matched"
             end
         end
 
       end
-
-    return string_array
 
 end
