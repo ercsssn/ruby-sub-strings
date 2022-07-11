@@ -21,11 +21,11 @@ def substrings(string, words_array)
                if sub_letters_array == letters_array
                 match_array.append(substring)  #Get exact match
                else
-                puts substring
                 array_match = sub_letters_array & letters_array
                 word_test = array_match.join("")
 
                 if words_array.include?(word_test)
+                    puts word_test
                     
                     if (!word_test_array.include?(word_test))
                         word_test_array.append(word_test)
@@ -43,3 +43,5 @@ def substrings(string, words_array)
       p match_array
 
 end
+
+#TO FIX : Filter logic fails if two words have the same substrings sit and it
