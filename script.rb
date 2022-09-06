@@ -47,7 +47,6 @@ end
 
 #TO FIX : Filter logic fails if two words have the same substrings sit and it
 
-#Top 1
 def substrings(text, dictionary)
     result = Hash.new(0)
     lowered_text = text.downcase
@@ -67,7 +66,6 @@ def substrings(text, dictionary)
 
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 
-#Top 2
 def substrings (string, dictionary)
     matches = {}
     dictionary.each do |word|
@@ -79,7 +77,6 @@ end
 puts substrings("Below", dictionary)
 puts substrings("Howdy partner, sit down! How's it going?", dictionary)
 
-#Top 3
 def substrings(string, dictionary) 
     string = string.downcase
     count = string.split(' ').reduce(Hash.new(0)) do |object, word|
